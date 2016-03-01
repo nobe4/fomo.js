@@ -29,11 +29,6 @@ function fetchAndNotify(url, selector, frequence){
   }, frequence);
 }
 
-// configs has the following format :
-// [
-//    { url : '', selector: '', frequence: 0 },
-//    ...
-// ]
 module.exports = function(configs){
   for(var i in configs){
     var config = configs[i];
