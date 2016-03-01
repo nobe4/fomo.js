@@ -1,6 +1,11 @@
 var request = require('request'),
     cheerio = require('cheerio'),
+    open = require('open'),
     notifier = require('node-notifier');
+
+notifier.on('click', function (notifierObject, options) {
+  open(options.title);
+});
 
 function getPage(url, selector, callback) {
   request(url, function (error, response, body) {
@@ -22,7 +27,8 @@ function fetchAndNotify(url, selector, frequence){
         console.log(url, ':', currentValue);
         notifier.notify({
           'title': url,
-          'message': currentValue
+          'message': currentValue,
+          'wait': true
         });
       }
     });

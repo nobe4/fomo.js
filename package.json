@@ -1,6 +1,6 @@
 {
   "name": "fomo.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fear of missing out. JS to the rescue !",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "cheerio": "^0.20.0",
     "node-notifier": "^4.5.0",
+    "open": "0.0.5",
     "request": "^2.69.0"
   }
 }
