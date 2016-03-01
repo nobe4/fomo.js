@@ -5,9 +5,13 @@ Fear of missing out. JS to the rescue !
 Add an url, a selector and let the notifications flow !
 See test.js for an example.
 
+## Installation
+
+    npm install nobe4/fomo.js
+
 ## Usage
 
-    var fomo = require('fomo');
+    var fomo = require('fomo.js');
     fomo( /* config */ );
 
 ## Config
