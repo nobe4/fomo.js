@@ -14,6 +14,8 @@ See test.js for an example.
     var fomo = require('fomo.js');
     fomo( /* config */ );
 
+When you click on the notification, it will open the url in your web browser.
+
 ## Config
 
 The configuration has the following format :
