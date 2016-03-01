@@ -1,0 +1,24 @@
+{
+  "name": "fomo.js",
+  "version": "1.0.0",
+  "description": "Fear of missing out. JS to the rescue !",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobe4/fomo.js.git"
+  },
+  "author": "nobe4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nobe4/fomo.js/issues"
+  },
+  "homepage": "https://github.com/nobe4/fomo.js#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "node-notifier": "^4.5.0",
+    "request": "^2.69.0"
+  }
+}
