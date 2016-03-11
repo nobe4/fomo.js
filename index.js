@@ -24,18 +24,18 @@ function fetchAndNotify(url, selector, frequence, callback){
     getPage(url, selector, function(text, html){
       if (text != currentValue) {
         currentValue = text;
-
-        if(callback && callback(text, html) === false) return;
-
-        console.log(url, ':', currentValue);
-        notifier.notify({
-          'title': url,
-          'message': currentValue,
-          'wait': true
-        });
+        callback(url, text, html);
       }
     });
   }, frequence);
+}
+
+function notify(url, text, html){
+  notifier.notify({
+    'title': url,
+    'message': text,
+    'wait': true
+  });
 }
 
 module.exports = function(configs){
@@ -46,6 +46,7 @@ module.exports = function(configs){
     if(!config.url) throw "Missing url in the config";
     if(!config.selector) throw "Missing selector in the config";
     if(!config.frequence) config.frequence = 60 * 1000; // default is once per minute
+    if(!config.callback) config.callback = notify; // default is basic notification
 
     fetchAndNotify(config.url, config.selector, config.frequence, config.callback);
   }

@@ -26,7 +26,7 @@ The configuration has the following format :
       ]
 
 The frequence is optional (default: 1 minute).
-The callback is optional. By default the notification pops up and nothing else happens. If you do specify one, you can then `return false` to prevent the notification.
+The callback is optional. By default the notification pops up and nothing else happens. If you do specify one, it will prevent the notification.
 
 ## How does it work ?
 

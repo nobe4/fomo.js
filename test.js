@@ -11,14 +11,15 @@ fomo([
       selector: '.question-summary > div.summary > h3 > a',
     },
     {
-    	url: 'https://www.reddit.com/new/',
-      	selector: '.thing > div.entry.unvoted > p.title',
-      	frequence: 10e3, // once every second
-      	callback: function(text, html) {
-      		console.log("Callbacks work.");
-      		console.log("Text is " + text);
-      		console.log("Html is " + html);
-      	}
+      url: 'https://www.reddit.com/new/',
+      selector: '.thing > div.entry.unvoted > p.title',
+      frequence: 100,
+      callback: function(url, text, html) {
+        console.log("Callbacks work.");
+        console.log("Url is " + url);
+        console.log("Text is " + text);
+        console.log("Html is " + html);
+      }
     },
 ]);
 
