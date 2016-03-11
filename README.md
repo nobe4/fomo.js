@@ -21,7 +21,7 @@ When you click on the notification, it will open the url in your web browser.
 The configuration has the following format :
 
       [
-         { url : '', selector: '', frequence: 0, callback: function(innerText, innerHTML) {} },
+         { url : '', selector: '', frequence: 0, callback: function(url, innerText, innerHTML) {} },
          ...
       ]
 
