@@ -21,11 +21,12 @@ When you click on the notification, it will open the url in your web browser.
 The configuration has the following format :
 
       [
-         { url : '', selector: '', frequence: 0 },
+         { url : '', selector: '', frequence: 0, callback: function(innerText, innerHTML) {} },
          ...
       ]
 
 The frequence is optional (default: 1 minute).
+The callback is optional. By default the notification pops up and nothing else happens. If you do specify one, it will prevent the notification.
 
 ## How does it work ?
 
