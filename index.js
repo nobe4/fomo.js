@@ -13,7 +13,7 @@ function getPage(url, selector, callback) {
       var element = cheerio.load(body)(selector).first();
       callback(element.text(), element.html());
     } else {
-      console.log(error, response.status);
+      console.log(error);
     }
   });
 }
